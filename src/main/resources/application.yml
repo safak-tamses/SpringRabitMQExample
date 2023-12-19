@@ -1,0 +1,25 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/crud
+    username: root
+    password: example
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+sample:
+  rabbitmq:
+    exchange: default
+    queue: firstStepQueue
+    queue2: secondStepQueue
+    routingKey: sample.routingKey
+    routingKey2: sample.routingKey2
